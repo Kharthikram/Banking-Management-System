@@ -5,11 +5,13 @@ import com.kharthik.bankingsystem.dto.CustomerDTO;
 import java.util.List;
 import com.kharthik.bankingsystem.entity.Customer;
 import jakarta.validation.Valid;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 
 
 
 @RestController
 @RequestMapping("/api/customers")
+@SecurityRequirement(name = "bearerAuth")
 public class CustomerController {
     private final CustomerService customerService;
 
